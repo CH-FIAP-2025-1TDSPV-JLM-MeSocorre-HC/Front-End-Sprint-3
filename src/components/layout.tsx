@@ -2,33 +2,48 @@ import { Link, Outlet } from "react-router-dom";
 
 export function Layout() {
     return (
-        <div className="min-h-screen bg-white-500">
+        <div className="flex min-h-screen">
             
-            <nav className="bg-[#f5f5f5]">
-                <div className="flex justify-center items-center p-4 gap-x-10">
-                    
-                    <Link to="/" className="text-gray-600 p-2 rounded-xl hover:text-gray-800 hover:bg-blue-100/30">
-                        Home
-                    </Link>
-
-                    <Link to="/agendamentos" className="text-gray-600 p-2 rounded-xl hover:text-gray-800 hover:bg-blue-100/30">
-                        Agendamentos
-                    </Link>
-                    <Link to="/notificacoes" className="text-gray-600 p-2 rounded-xl hover:text-gray-800 hover:bg-blue-100/30">
-                        Notificações
-                    </Link>
-                    <Link to="/ajuda" className="text-gray-600 p-2 rounded-xl hover:text-gray-800 hover:bg-blue-100/30">
-                        Ajuda
-                    </Link>
-                    <Link to="/faq" className="text-gray-600 p-2 rounded-xl hover:text-gray-800 hover:bg-blue-100/30">
-                        Perguntas Frequentes
-                    </Link>
-                    <Link to="/quem-somos" className="text-gray-600 p-2 rounded-xl hover:text-gray-800 hover:bg-blue-100/30">
-                        Quem Somos
-                    </Link>
-
+            <aside className="w-64 bg-gray-100 p-4 flex flex-col">
+                <div className="flex items-center justify-center mb-8">
+                    <img src="./public/hc-usp.png" alt="HC-USP" className="h-20" />
                 </div>
-            </nav>
+
+                <div className="space-y-4">
+                    <div className="text-gray-700 font-semibold mb-2">Olá, Johnny</div>
+
+                    <nav className="flex flex-col space-y-2">
+                        <Link to="/" className="flex items-center gap-3 p-2 rounded-lg hover:bg-gray-200">
+                            Meus Resultados
+                        </Link>
+                        <Link to="/receitas" className="flex items-center gap-3 p-2 rounded-lg hover:bg-gray-200">
+                            Minhas Receitas
+                        </Link>
+                        <Link to="/agendas" className="flex items-center gap-3 p-2 rounded-lg hover:bg-gray-200">
+                            Minhas Agendas
+                        </Link>
+                        <Link to="/teleconsulta" className="flex items-center gap-3 p-2 rounded-lg hover:bg-gray-200">
+                            Teleconsulta
+                        </Link>
+                        <Link to="/exames" className="flex items-center gap-3 p-2 rounded-lg hover:bg-gray-200">
+                        Solicitação de Exames
+                        </Link>
+                        <Link to="/documentos" className="flex items-center gap-3 p-2 rounded-lg hover:bg-gray-200">
+                            Documentos
+                        </Link>
+                        <Link to="/pesquisa" className="flex items-center gap-3 p-2 rounded-lg hover:bg-gray-200">
+                            Pesquisa de Satisfação
+                        </Link>
+                        <Link to="/termos" className="flex items-center gap-3 p-2 rounded-lg hover:bg-gray-200">
+                            Termos de Aceite
+                        </Link>
+                        <Link to="/ajuda" className="flex items-center gap-3 p-2 rounded-lg hover:bg-gray-200">
+                            Preciso de Ajuda
+                        </Link>
+                    </nav>
+                </div>
+            </aside>
+
             <main className="flex-1 bg-white p-8">
                 <Outlet/>
             </main>
