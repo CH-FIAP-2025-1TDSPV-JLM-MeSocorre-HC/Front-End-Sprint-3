@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 .sidebar {
-  @apply w-64 bg-gray-100 p-4 flex flex-col;
+  @apply w-68 bg-gray-100 p-4 flex flex-col;
 }
 
 .sidebar-logo {
