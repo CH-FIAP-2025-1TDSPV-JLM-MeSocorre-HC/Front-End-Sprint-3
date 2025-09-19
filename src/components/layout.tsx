@@ -7,7 +7,7 @@ export function Layout() {
     <div className="flex min-h-screen">
       <aside className="sidebar">
         <div className="sidebar-logo">
-          <img src="hc-usp.png" alt="HC-USP" className="h-12" />
+          <img src="hc-usp.png" alt="HC-USP" className="h-20" />
         </div>
 
         <div>
@@ -44,7 +44,7 @@ export function Layout() {
           </nav>
         </div>
       </aside>
-      
+
 
       <main className="main-content">
         <Outlet />
