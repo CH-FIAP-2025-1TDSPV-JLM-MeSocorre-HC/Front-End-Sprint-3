@@ -1,5 +1,5 @@
 import { Link, Outlet } from "react-router-dom";
-import { FileText, Calendar, Video, FileSearch, Folder, Smile, FileCheck, HelpCircle } from "lucide-react";
+import { FileText, Calendar, Video, FileSearch, Folder, Smile, FileCheck, HelpCircle, Users } from "lucide-react";
 import "../App.css";
 
 export function Layout() {
@@ -40,6 +40,9 @@ export function Layout() {
             </Link>
             <Link to="/ajuda" className="sidebar-link">
               <HelpCircle size={20} /> Preciso de Ajuda
+            </Link>
+            <Link to="/quem-somos" className="sidebar-link">
+              <Users size={20} /> Quem Somos
             </Link>
           </nav>
         </div>
