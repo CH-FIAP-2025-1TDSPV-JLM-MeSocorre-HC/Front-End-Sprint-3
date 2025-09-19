@@ -1,7 +1,7 @@
 export function Receitas() {
     return (
         <>
-            <h2 className="font-bold text-gray-600 text-xl mb-3">
+            <h2 className="titulo">
                 Minhas Receitas
             </h2>
         </>
