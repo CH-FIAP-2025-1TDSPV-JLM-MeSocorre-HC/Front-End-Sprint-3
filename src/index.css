@@ -13,7 +13,7 @@
 }
 
 .sidebar-nav {
-  @apply flex flex-col space-y-2;
+  @apply flex flex-col space-y-2 text-gray-600 hover:text-gray-700;
 }
 
 .sidebar-link {
