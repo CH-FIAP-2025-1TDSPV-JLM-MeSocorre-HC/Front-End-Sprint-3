@@ -50,7 +50,9 @@ export function Layout() {
 
 
       <main className="main-content">
-        <Outlet />
+        <section className="bg-white min-h-95/100 p-6 rounded-2xl">
+          <Outlet />
+        </section>
       </main>
     </div>
   );
