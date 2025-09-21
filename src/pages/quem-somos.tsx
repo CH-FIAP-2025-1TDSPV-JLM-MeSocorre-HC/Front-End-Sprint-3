@@ -1,5 +1,7 @@
 import { Aluno } from "../components/aluno";
-import johnny from "../assets/johnny.jpeg"
+import johnny from "../assets/johnny.jpeg";
+import luisa from "../assets/luisa.jpg";
+import matheus from "../assets/matheus.jpeg";
 
 
 export function QuemSomos() {
@@ -24,7 +26,7 @@ export function QuemSomos() {
                         <Aluno 
                         id="2"
                         nome="Luisa Ganasevici de Abreu"
-                        img={johnny}
+                        img={luisa}
                         rm={563403}
                         github="https://github.com/luisa-ganasevici"
                         linkedin="https://www.linkedin.com/in/luisa-ganasevici-316824356/"
@@ -34,7 +36,7 @@ export function QuemSomos() {
                         <Aluno 
                         id="3"
                         nome="Matheus Arazin de Oliveira"
-                        img={johnny}
+                        img={matheus}
                         rm={556649}
                         github="https://github.com/Mathzoba"
                         linkedin="https://www.linkedin.com/in/matheus-arazin/"
