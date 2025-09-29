@@ -12,7 +12,7 @@ export function QuemSomos() {
             </h2>
             <article className="flex flex-col text-center place-content-center">                
                 <div className="flex flex-row place-content-around">
-                    <div className="aluno-container">
+                    <div className="bg-[#0077C8] rounded-xl p-2 text-white mb-4 w-70 h-70">
                         <Aluno 
                         id="1"
                         nome="Johnny Dias Mathias Junior"
@@ -22,7 +22,7 @@ export function QuemSomos() {
                         linkedin="https://www.linkedin.com/in/johnny-mathias-dev/"
                     />
                     </div>
-                    <div className="aluno-container">
+                    <div className="bg-[#008bc7] rounded-xl p-2 text-white mb-4 w-70 h-70">
                         <Aluno 
                         id="2"
                         nome="Luisa Ganasevici de Abreu"
@@ -32,7 +32,7 @@ export function QuemSomos() {
                         linkedin="https://www.linkedin.com/in/luisa-ganasevici-316824356/"
                     />
                     </div>
-                    <div className="aluno-container">
+                    <div className="bg-[#009aa1] rounded-xl p-2 text-white mb-4 w-70 h-70">
                         <Aluno 
                         id="3"
                         nome="Matheus Arazin de Oliveira"
