@@ -17,8 +17,7 @@ export function MeusResultados() {
           `}
         >
           <Microscope
-            className="h-8 w-8"
-            strokeWidth={1.5}
+            className="h-8 w-8 stroke-1"
           />
           <h4>Laboratório</h4>
         </div>
@@ -30,8 +29,7 @@ export function MeusResultados() {
           `}
         >
           <Image
-            className="h-8 w-8"
-            strokeWidth={1.5}
+            className="h-8 w-8 stroke-1"
           />
           <h4>Imagem</h4>
         </div>
