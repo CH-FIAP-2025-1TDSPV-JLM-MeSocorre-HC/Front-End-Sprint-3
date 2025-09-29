@@ -14,7 +14,7 @@
 
 .meSocorre {
   font-family: 'Porcelain';
-  @apply text-white bg-[#009aa1] p-2 rounded-lg text-xl
+  @apply text-white bg-[#008bc7] p-2 rounded-lg text-xl
 }
 
 .sidebar-link {
@@ -24,3 +24,8 @@
 .titulo {
   @apply text-[#0077C8] text-2xl mb-3;
 }
+
+#selected {
+  @apply text-[#0077C8] hover:bg-[#0077C8]/50
+}
+

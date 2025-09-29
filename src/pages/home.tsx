@@ -2,7 +2,7 @@ export function Home() {
     return (
         <>
             <h2 className="titulo">
-                Meus Resultados
+                Meus Agendamentos
             </h2>
         </>
     )
