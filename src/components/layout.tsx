@@ -5,15 +5,15 @@ import "../App.css";
 export function Layout() {
   return (
     <div className="flex min-h-screen">
-      <aside className="sidebar">
-        <div className="sidebar-logo">
+      <aside className="w-72 bg-gray-100 p-4 flex flex-col h-screen overflow-hidden hover:overflow-y-auto transition-all;">
+        <div className="flex items-center justify-center mb-8">
           <img src="hc-usp.png" alt="HC-USP" className="h-20" />
         </div>
 
         <div>
-          <div className="sidebar-user">Olá, Johnny</div>
+          <div className="text-gray-700 font-semibold mb-2">Olá, Johnny</div>
 
-          <nav className="sidebar-nav">
+          <nav className="flex flex-col space-y-2 text-gray-600 hover:text-gray-700">
             <Link to="/" className="sidebar-link" title="Meus Resultados">
               <FileText size={20} /> Meus Resultados
             </Link>
@@ -49,7 +49,7 @@ export function Layout() {
       </aside>
 
 
-      <main className="main-content">
+      <main className="flex-1 bg-gray-100 px-4 pt-8 min-h-10;">
         <section className="bg-white min-h-95/100 p-6 rounded-2xl">
           <Outlet />
         </section>

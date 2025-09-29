@@ -17,35 +17,10 @@
   @apply text-white bg-[#009aa1] p-2 rounded-lg text-xl
 }
 
-.sidebar {
-  @apply w-72 bg-gray-100 p-4 flex flex-col h-screen
-  overflow-hidden hover:overflow-y-auto transition-all;
-}
-
-.sidebar-logo {
-  @apply flex items-center justify-center mb-8;
-}
-
-.sidebar-user {
-  @apply text-gray-700 font-semibold mb-2;
-}
-
-.sidebar-nav {
-  @apply flex flex-col space-y-2 text-gray-600 hover:text-gray-700;
-}
-
 .sidebar-link {
   @apply flex items-center gap-3 ml-2 p-2 rounded-lg text-sm hover:bg-gray-200;
 }
 
-.main-content {
-  @apply flex-1 bg-gray-100 px-4 pt-8 min-h-10;
-}
-
 .titulo {
   @apply text-[#0077C8] text-2xl mb-3;
-}
-
-.aluno {
-   @apply bg-[#0077C8] p-2 rounded-xl text-white mb-4 w-70 h-70;
 }
