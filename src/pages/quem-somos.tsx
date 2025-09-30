@@ -1,7 +1,7 @@
 import { Aluno } from "../components/aluno";
-import johnny from "../assets/johnny.jpeg";
-import luisa from "../assets/luisa.jpg";
-import matheus from "../assets/matheus.jpeg";
+import johnny from "../assets/members-pics/johnny.jpeg";
+import luisa from "../assets/members-pics/luisa.jpg";
+import matheus from "../assets/members-pics/matheus.jpeg";
 
 
 export function QuemSomos() {

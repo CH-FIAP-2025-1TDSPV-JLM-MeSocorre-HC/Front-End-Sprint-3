@@ -4,6 +4,7 @@ import { Home } from "./pages/home";
 import { Receitas } from "./pages/receitas";
 import { QuemSomos } from "./pages/quem-somos";
 import { MeusResultados } from "./pages/meus-resultados";
+import { NotFound } from "./pages/not-found";
 
 function App() {
 
@@ -16,6 +17,7 @@ function App() {
           <Route path="/meus-resultados" element={<MeusResultados />} />
           <Route path="/receitas" element={<Receitas/>} />
           <Route path="/quem-somos" element={<QuemSomos />} />
+          <Route path="*" element={<NotFound />}/>
         </Route>
       </Routes>
     </BrowserRouter>
