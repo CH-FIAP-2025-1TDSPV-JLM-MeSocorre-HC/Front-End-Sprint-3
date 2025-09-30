@@ -1,5 +1,5 @@
 import { Link, Outlet } from "react-router-dom";
-import { FileText, Calendar, Video, FileSearch, Folder, Smile, FileCheck, HelpCircle, Users } from "lucide-react";
+import { FileText, Calendar, Video, FileSearch, FileCheck, HelpCircle, Users, UserRoundPen, Phone } from "lucide-react";
 import "../App.css";
 
 export function Layout() {
@@ -35,20 +35,16 @@ export function Layout() {
               <FileSearch size={20} /> Solicitação de Exames
             </Link>
 
-            <Link to="/documentos" className="sidebar-link" title="Documentos">
-              <Folder size={20} /> Documentos
-            </Link>
-
-            <Link to="/pesquisa" className="sidebar-link" title="Pesquisa de Satisfação">
-              <Smile size={20} /> Pesquisa de Satisfação
-            </Link>
-
-            <Link to="/termos" className="sidebar-link" title="Termos de Aceite">
-              <FileCheck size={20} /> Termos de Aceite
-            </Link>
-
             <Link to="/ajuda" className="sidebar-link" title="Preciso de Ajuda">
               <HelpCircle size={20} /> Preciso de Ajuda
+            </Link>
+
+            <Link to="/contato" className="sidebar-link" title="Contato">
+              <Phone size={20}/>Contato
+            </Link>
+
+            <Link to="/sobre" className="sidebar-link" title="Sobre">
+              <UserRoundPen size={20}/>Sobre
             </Link>
 
             <Link to="/quem-somos" className="sidebar-link" title="Quem Somos">
