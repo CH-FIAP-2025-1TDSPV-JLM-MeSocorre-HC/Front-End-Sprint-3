@@ -6,7 +6,6 @@ import { lazy, Suspense, useCallback, useState } from "react";
 import { ErrorBoundary } from "react-error-boundary";
 import { Fallback } from "./components/fallback";
 import { Loading } from "./components/loading";
-import { Ajuda } from "./pages/ajuda";
 
 const Home = lazy(() =>
   import("./pages/home").then((m) => ({default: m.Home})))
@@ -37,6 +36,9 @@ const Sobre = lazy(() =>
 
 const QuemSomos = lazy(() =>
   import("./pages/quem-somos").then((m) => ({default: m.QuemSomos})))
+
+const Ajuda = lazy(() =>
+  import("./pages/ajuda").then((m) => ({default: m.Ajuda})))
 
 const NotFound = lazy(() =>
   import("./pages/not-found").then((m) => ({default: m.NotFound})))
