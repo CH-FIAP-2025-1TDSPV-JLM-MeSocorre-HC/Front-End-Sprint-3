@@ -23,6 +23,13 @@ export function Contato() {
                 <h3 className="font-bold mb-2">Dúvidas sobre educação a distância:</h3>
                     <p className="ml-2">&bull; hcxonline.hcx@hc.fm.usp.br</p>
             </div>
+
+            <h2>Nossa Localização</h2>
+            
+            <h3>HCX Fmusp</h3>
+
+                <p>Endereço: Rua. Dr. Ovídio Pires de Campos, 471</p>
+                <p>05403-010 – São Paulo – SP</p>
             
             <p className="ml-2 text-gray-600">&bull; Horário de Atendimento: segunda a sexta das 8h às 19h e aos sábados das 8h às 13h</p>
 

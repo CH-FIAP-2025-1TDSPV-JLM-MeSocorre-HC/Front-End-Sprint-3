@@ -6,6 +6,7 @@ import { QuemSomos } from "./pages/quem-somos";
 import { MeusResultados } from "./pages/meus-resultados";
 import { NotFound } from "./pages/not-found";
 import { Contato } from "./pages/contato";
+import { Sobre } from "./pages/sobre";
 
 function App() {
 
@@ -18,6 +19,7 @@ function App() {
           <Route path="/meus-resultados" element={<MeusResultados />} />
           <Route path="/receitas" element={<Receitas/>} />
           <Route path="/contato" element={<Contato />} />
+          <Route path="/sobre" element={<Sobre/>} />
           <Route path="/quem-somos" element={<QuemSomos />} />
           <Route path="*" element={<NotFound />}/>
         </Route>
