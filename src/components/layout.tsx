@@ -1,5 +1,5 @@
 import { Link, Outlet } from "react-router-dom";
-import { FileText, Calendar, Video, FileSearch, FileCheck, HelpCircle, Users, UserRoundPen, Phone } from "lucide-react";
+import { FileText, Calendar, Video, FileCheck, HelpCircle, Users, UserRoundPen, Phone } from "lucide-react";
 import "../App.css";
 
 export function Layout() {
