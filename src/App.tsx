@@ -7,6 +7,7 @@ import { MeusResultados } from "./pages/meus-resultados";
 import { NotFound } from "./pages/not-found";
 import { Contato } from "./pages/contato";
 import { Sobre } from "./pages/sobre";
+import { Teleconsulta } from "./pages/teleconsulta";
 
 function App() {
 
@@ -18,6 +19,7 @@ function App() {
           <Route index element={<Home />} />
           <Route path="/meus-resultados" element={<MeusResultados />} />
           <Route path="/receitas" element={<Receitas/>} />
+          <Route path="/teleconsultas" element={<Teleconsulta />} />
           <Route path="/contato" element={<Contato />} />
           <Route path="/sobre" element={<Sobre/>} />
           <Route path="/quem-somos" element={<QuemSomos />} />

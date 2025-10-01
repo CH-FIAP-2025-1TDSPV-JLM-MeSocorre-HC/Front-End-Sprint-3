@@ -27,7 +27,7 @@ export function Layout() {
               <FileCheck size={20} /> Minhas Receitas
             </Link>
 
-            <Link to="/teleconsulta" className="sidebar-link" title="Teleconsulta">
+            <Link to="/teleconsultas" className="sidebar-link" title="Teleconsulta">
               <Video size={20} /> Teleconsulta
             </Link>
 
