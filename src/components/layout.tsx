@@ -57,7 +57,7 @@ export function Layout() {
 
 
       <main className="flex-1 bg-gray-100 px-4 pt-8 ml-72">
-        <section className="bg-white min-h-[95vh] p-6 rounded-2xl">
+        <section className="bg-white min-h-9/10 p-6 rounded-2xl">
           <Outlet />
         </section>
       </main>
