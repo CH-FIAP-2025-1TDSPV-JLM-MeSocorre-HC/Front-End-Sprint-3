@@ -29,3 +29,10 @@
   @apply text-[#0077C8] hover:bg-[#0077C8]/50
 }
 
+.pergunta {
+  @apply font-semibold mb-2 text-justify 
+}
+
+.resposta {
+  @apply text-gray-600 ml-2 mb-4 text-justify
+}
