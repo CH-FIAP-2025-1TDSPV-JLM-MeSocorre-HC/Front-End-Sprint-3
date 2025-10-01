@@ -9,7 +9,7 @@ import { Contato } from "./pages/contato";
 import { Sobre } from "./pages/sobre";
 import { Teleconsulta } from "./pages/teleconsulta";
 import { NovaTeleconsulta } from "./pages/nova-teleconsulta";
-import { TeleconsultaDetails } from "./pages/teleconsult-details";
+import { TeleconsultaDetails } from "./pages/teleconsulta-details";
 import type { Teleconsulta as TeleconsultaType } from "./types/teleconsulta";
 import type { Agendamentos as AgendamentoType} from "./types/agendamentos"
 import { useState } from "react";
@@ -73,6 +73,7 @@ function App() {
             teleconsultas={teleconsultas} 
             onAdd={addTeleconsulta}
           />} />
+          <Route path="/agendamentos/:id" />
           <Route path="/teleconsultas/:id" element={<TeleconsultaDetails />}/>
           <Route path="/contato" element={<Contato />} />
           <Route path="/sobre" element={<Sobre/>} />
