@@ -7,9 +7,9 @@ import matheus from "../assets/members-pics/matheus.jpeg";
 export function QuemSomos() {
     return (
         <>
-            <h2 className="titulo">
+            <h1 className="titulo">
                 Quem Somos
-            </h2>
+            </h1>
             <article className="flex flex-col text-center place-content-center">                
                 <div className="flex flex-row place-content-around">
                     <div className="bg-[#0077C8] rounded-xl p-2 text-white mb-4 w-70 h-80">

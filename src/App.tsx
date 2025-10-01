@@ -5,6 +5,7 @@ import { Receitas } from "./pages/receitas";
 import { QuemSomos } from "./pages/quem-somos";
 import { MeusResultados } from "./pages/meus-resultados";
 import { NotFound } from "./pages/not-found";
+import { Contato } from "./pages/contato";
 
 function App() {
 
@@ -16,6 +17,7 @@ function App() {
           <Route index element={<Home />} />
           <Route path="/meus-resultados" element={<MeusResultados />} />
           <Route path="/receitas" element={<Receitas/>} />
+          <Route path="/contato" element={<Contato />} />
           <Route path="/quem-somos" element={<QuemSomos />} />
           <Route path="*" element={<NotFound />}/>
         </Route>

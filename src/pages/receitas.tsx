@@ -1,9 +1,9 @@
 export function Receitas() {
     return (
         <>
-            <h2 className="titulo">
+            <h1 className="titulo">
                 Minhas Receitas
-            </h2>
+            </h1>
         </>
     )
 }
