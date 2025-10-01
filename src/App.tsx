@@ -11,7 +11,9 @@ import { Teleconsulta } from "./pages/teleconsulta";
 import { NovaTeleconsulta } from "./pages/nova-teleconsulta";
 import { TeleconsultaDetails } from "./pages/teleconsult-details";
 import type { Teleconsulta as TeleconsultaType } from "./types/teleconsulta";
+import type { Agendamentos as AgendamentoType} from "./types/agendamentos"
 import { useState } from "react";
+import { NovoAgendamento } from "./pages/novo-agendamento";
 
 function App() {
 
@@ -27,13 +29,36 @@ function App() {
   const removeTeleconsulta = (id: string) => {
     setTeleconsultas((prev) => prev.filter((t) => t.id !== id));
   };
+  
+     // estado centralizado com todas as Agendamentos
+  const [agendamentos, setAgendamentos] = useState<AgendamentoType[]>([]);
+
+  // função para adicionar uma Agendamento
+  const addAgendamento = (nova: AgendamentoType) => {
+    setAgendamentos((prev) => [...prev, nova]);
+  };
+
+  // função para remover uma Agendamento
+  const removeAgendamento = (id: string) => {
+    setAgendamentos((prev) => prev.filter((t) => t.id !== id));
+  };
 
 
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Layout />}>
-          <Route index element={<Home />} />
+          <Route index
+            element={<Home
+            agendamentos={agendamentos}
+            removeAgendamentos={removeAgendamento}
+          />} />
+          <Route
+            path="/agendamentos/novo-agendamento"
+            element={<NovoAgendamento 
+            agendamentos={agendamentos}
+            onAdd={addAgendamento}
+          />} />
           <Route path="/meus-resultados" element={<MeusResultados />} />
           <Route path="/receitas" element={<Receitas/>} />
           <Route
