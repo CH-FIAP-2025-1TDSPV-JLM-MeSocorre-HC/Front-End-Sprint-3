@@ -1,5 +1,11 @@
 # 🏥 Sprint 3 - Front-End
 
+### Integrantes
+
+Johnny Dias Mathias Junior      RM: 566516
+Luisa Ganasevici de Abreu       RM: 563403
+Matheus Arazin de Oliveira      RM: 556649
+
 ## 📁 Estrutura Completa do Projeto
 
 Front-End-Sprint-3/
