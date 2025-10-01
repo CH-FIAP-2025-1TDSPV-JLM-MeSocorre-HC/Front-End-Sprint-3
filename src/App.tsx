@@ -2,7 +2,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Layout } from './components/layout';
 import type { Teleconsulta as TeleconsultaType } from "./types/teleconsulta";
 import type { Agendamentos as AgendamentoType} from "./types/agendamentos"
-import { lazy, Suspense, useState } from "react";
+import { lazy, Suspense, useCallback, useState } from "react";
 import { ErrorBoundary } from "react-error-boundary";
 import { Fallback } from "./components/fallback";
 import { Loading } from "./components/loading";
@@ -41,27 +41,24 @@ const NotFound = lazy(() =>
   import("./pages/not-found").then((m) => ({default: m.NotFound})))
 
 function App() {
-
   const [teleconsultas, setTeleconsultas] = useState<TeleconsultaType[]>([]);
-
-  const addTeleconsulta = (nova: TeleconsultaType) => {
-    setTeleconsultas((prev) => [...prev, nova]);
-  };
-
-  const removeTeleconsulta = (id: string) => {
-    setTeleconsultas((prev) => prev.filter((t) => t.id !== id));
-  };
-  
   const [agendamentos, setAgendamentos] = useState<AgendamentoType[]>([]);
 
-  const addAgendamento = (nova: AgendamentoType) => {
+  const addTeleconsulta = useCallback((nova: TeleconsultaType) => {
+    setTeleconsultas((prev) => [...prev, nova]);
+  }, []);
+
+  const removeTeleconsulta = useCallback((id: string) => {
+    setTeleconsultas((prev) => prev.filter((t) => t.id !== id));
+  }, []);
+
+  const addAgendamento = useCallback((nova: AgendamentoType) => {
     setAgendamentos((prev) => [...prev, nova]);
-  };
+  }, []);
 
-  const removeAgendamento = (id: string) => {
+  const removeAgendamento = useCallback((id: string) => {
     setAgendamentos((prev) => prev.filter((t) => t.id !== id));
-  };
-
+  }, []);
 
   return (
     <BrowserRouter>
@@ -101,7 +98,7 @@ function App() {
               />} />
               <Route path="/agendamentos/:id" />
 
-              <Route path="/teleconsultas/:id" element={<TeleconsultaDetails />}/>
+              <Route path="/teleconsultas/:id" element={<TeleconsultaDetails teleconsultas={teleconsultas}/>}/>
 
               <Route path="/contato" element={<Contato />} />
 
