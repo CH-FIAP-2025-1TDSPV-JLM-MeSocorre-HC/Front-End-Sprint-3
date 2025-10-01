@@ -8,7 +8,7 @@ interface TeleconsultaFormProps {
 }
 
 
-export function WorkoutForm({ onAdd }: TeleconsultaFormProps) {
+export function TeleconsultaForm({ onAdd }: TeleconsultaFormProps) {
   const {
     register,
     handleSubmit,
@@ -38,11 +38,11 @@ export function WorkoutForm({ onAdd }: TeleconsultaFormProps) {
       onSubmit={handleSubmit(onSubmit)}
       className="bg-white shadow rounded-lg p-4 flex flex-col gap-3 mb-5 w-4/5"
     >
-      <label htmlFor="teleconsulta-titulo">Título do treino</label>
+      <label htmlFor="teleconsulta-titulo">Título da teleconsulta</label>
       <input
         type="text"
         id="teleconsulta-titulo"
-        placeholder="título do treino"
+        placeholder="título da teleconsulta"
         className="border rounded p-2"
         {...register('titulo')}
       />
@@ -72,11 +72,11 @@ export function WorkoutForm({ onAdd }: TeleconsultaFormProps) {
 
       {errors.end && <p className="text-red-500">{errors.end.message}</p>}
 
-      <label htmlFor="teleconsulta-profissional">Nota</label>
+      <label htmlFor="teleconsulta-profissional">Profissional</label>
       <input
         type="text"
         id="teleconsulta-profissional" 
-        placeholder="Nota (Opcional)"
+        placeholder="Nome do profissional"
         className="border rounded p-2"
         {...register('profissional')}
         />
@@ -85,7 +85,7 @@ export function WorkoutForm({ onAdd }: TeleconsultaFormProps) {
         type="submit"
         className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
       >
-        Adicionar treino
+        Adicionar teleconsulta
       </button>
     </form>
   );
