@@ -8,7 +8,7 @@ export function MeusResultados() {
 
   return (
     <>
-      <h2 className="titulo">Meus Resultados</h2>
+      <h1 className="titulo">Meus Resultados</h1>
       <div className="flex h-24">
         <div
           onClick={() => setSelected("laboratorio")}

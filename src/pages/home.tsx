@@ -3,9 +3,9 @@ import { AgendamentosCard } from "../components/agendamentos-card";
 export function Home() {
     return (
         <>
-            <h2 className="titulo">
+            <h1 className="titulo">
                 Meus Agendamentos
-            </h2>
+            </h1>
             <AgendamentosCard
             id="1"
             titulo="Fisioterapia"
