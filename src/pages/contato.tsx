@@ -1,4 +1,4 @@
-import { MoveRight } from "lucide-react";
+import { MapPin, MoveRight } from "lucide-react";
 
 export function Contato() {
     return (
@@ -24,12 +24,15 @@ export function Contato() {
                     <p className="ml-2">&bull; hcxonline.hcx@hc.fm.usp.br</p>
             </div>
 
-            <h2>Nossa Localização</h2>
+            <h2 className="flex font-bold text-[#0077C8] mb-4 gap-x-2"><MapPin/>Nossa Localização</h2>
             
-            <h3>HCX Fmusp</h3>
+            <div className="ml-9 mb-8">
+                <h3 className="font-bold">HCX Fmusp</h3>
 
                 <p>Endereço: Rua. Dr. Ovídio Pires de Campos, 471</p>
                 <p>05403-010 – São Paulo – SP</p>
+            </div>
+            
             
             <p className="ml-2 text-gray-600">&bull; Horário de Atendimento: segunda a sexta das 8h às 19h e aos sábados das 8h às 13h</p>
 
