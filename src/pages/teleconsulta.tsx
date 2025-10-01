@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import { TeleconsultaList } from "../components/teleconsulta-list";
-import type { Teleconsulta } from "../types/teleconsulta";
 import type { TeleconsultaProps } from "../types/teleconsulta-props";
 
 export function Teleconsulta({ teleconsultas, removeTeleconsulta}: TeleconsultaProps) {

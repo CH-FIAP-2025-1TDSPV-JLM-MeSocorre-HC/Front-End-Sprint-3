@@ -31,10 +31,6 @@ export function Layout() {
               <Video size={20} /> Teleconsulta
             </Link>
 
-            <Link to="/exames" className="sidebar-link" title="Solicitação de Exames">
-              <FileSearch size={20} /> Solicitação de Exames
-            </Link>
-
             <Link to="/ajuda" className="sidebar-link" title="Preciso de Ajuda">
               <HelpCircle size={20} /> Preciso de Ajuda
             </Link>

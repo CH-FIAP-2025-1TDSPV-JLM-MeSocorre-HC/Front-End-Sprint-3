@@ -45,6 +45,5 @@ export function TeleconsultaResume({ teleconsulta, removeTeleconsulta }: Telecon
             </button> 
         </div>
     </div>
-    
   );
 }

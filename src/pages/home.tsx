@@ -1,22 +1,20 @@
-import { AgendamentosCard } from "../components/agendamentos-card";
+import { Link } from "react-router-dom";
+import { AgendamentosList } from "../components/agendamentos-list";
+import type { AgendamentosProps } from "../types/agendamentos-props";
 
-export function Home() {
+export function Home({ agendamentos, removeAgendamentos}: AgendamentosProps) {
     return (
-        <>
-            <h1 className="titulo">
-                Meus Agendamentos
-            </h1>
-            <AgendamentosCard
-            id="1"
-            titulo="Fisioterapia"
-            end="Hospital das Clínicas FMUSP: R. Dr. Ovídio Pires de Campos, 225 - Cerqueira César, São Paulo - SP, 05403-010"
-            data="Segunda-feira, 06/10/2025"
-            />
-            <AgendamentosCard
-            id="2"
-            titulo="Radioterapia"
-            end="Hospital das Clínicas FMUSP: R. Dr. Ovídio Pires de Campos, 225 - Cerqueira César, São Paulo - SP, 05403-010"
-            data="Terça-feira, 07/10/2025" />
-        </>
+        <div>
+            <h1 className="titulo">Meus Agendamentos</h1>
+            <div className="flex flex-col items-center">
+                <AgendamentosList
+                    removeAgendamentos={removeAgendamentos}
+                    agendamentos={agendamentos} />
+                    
+                <Link to="/agendamentos/novo-agendamento" className="bg-[#0077c8] p-2 rounded-lg text-white">
+                    Novo Agendamento
+                </Link>
+            </div>
+        </div>
     )
 }
