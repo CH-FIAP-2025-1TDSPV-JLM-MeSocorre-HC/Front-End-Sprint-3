@@ -1,5 +1,5 @@
 import { Link, Outlet } from "react-router-dom";
-import { FileText, Calendar, Video, FileSearch, FileCheck, HelpCircle, Users, UserRoundPen, Phone } from "lucide-react";
+import { FileText, Calendar, Video, FileCheck, HelpCircle, Users, UserRoundPen, Phone } from "lucide-react";
 import "../App.css";
 
 export function Layout() {
@@ -27,12 +27,8 @@ export function Layout() {
               <FileCheck size={20} /> Minhas Receitas
             </Link>
 
-            <Link to="/teleconsulta" className="sidebar-link" title="Teleconsulta">
+            <Link to="/teleconsultas" className="sidebar-link" title="Teleconsulta">
               <Video size={20} /> Teleconsulta
-            </Link>
-
-            <Link to="/exames" className="sidebar-link" title="Solicitação de Exames">
-              <FileSearch size={20} /> Solicitação de Exames
             </Link>
 
             <Link to="/ajuda" className="sidebar-link" title="Preciso de Ajuda">
