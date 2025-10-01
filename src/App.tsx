@@ -98,7 +98,7 @@ function App() {
               />} />
               <Route path="/agendamentos/:id" />
 
-              <Route path="/teleconsultas/:id" element={<TeleconsultaDetails />}/>
+              <Route path="/teleconsultas/:id" element={<TeleconsultaDetails teleconsultas={teleconsultas}/>}/>
 
               <Route path="/contato" element={<Contato />} />
 
