@@ -9,8 +9,24 @@ import { Contato } from "./pages/contato";
 import { Sobre } from "./pages/sobre";
 import { Teleconsulta } from "./pages/teleconsulta";
 import { NovaTeleconsulta } from "./pages/nova-teleconsulta";
+import { TeleconsultaDetails } from "./pages/teleconsult-details";
+import type { Teleconsulta as TeleconsultaType } from "./types/teleconsulta";
+import { useState } from "react";
 
 function App() {
+
+   // estado centralizado com todas as teleconsultas
+  const [teleconsultas, setTeleconsultas] = useState<TeleconsultaType[]>([]);
+
+  // função para adicionar uma teleconsulta
+  const addTeleconsulta = (nova: TeleconsultaType) => {
+    setTeleconsultas((prev) => [...prev, nova]);
+  };
+
+  // função para remover uma teleconsulta
+  const removeTeleconsulta = (id: string) => {
+    setTeleconsultas((prev) => prev.filter((t) => t.id !== id));
+  };
 
 
   return (
@@ -20,9 +36,19 @@ function App() {
           <Route index element={<Home />} />
           <Route path="/meus-resultados" element={<MeusResultados />} />
           <Route path="/receitas" element={<Receitas/>} />
-          <Route path="/teleconsultas" element={<Teleconsulta />} />
-          <Route path="/teleconsultas/nova-teleconsulta" element={<NovaTeleconsulta />} />
-          
+          <Route
+            path="/teleconsultas"
+            element={<Teleconsulta
+            teleconsultas={teleconsultas}
+            removeTeleconsulta={removeTeleconsulta}
+          />} />
+          <Route
+            path="/teleconsultas/nova-teleconsulta" 
+            element={<NovaTeleconsulta 
+            teleconsultas={teleconsultas} 
+            onAdd={addTeleconsulta}
+          />} />
+          <Route path="/teleconsultas/:id" element={<TeleconsultaDetails />}/>
           <Route path="/contato" element={<Contato />} />
           <Route path="/sobre" element={<Sobre/>} />
           <Route path="/quem-somos" element={<QuemSomos />} />

@@ -1,9 +1,9 @@
 import { z } from 'zod';
 
 export const teleconsultaSchema = z.object({
-    titulo: z.string().nonempty('O título é obrigatório!'),
-    end: z.string().nonempty('O endereço é obrigatório!'),
+    titulo: z.string().nonempty('O tipo da consulta é obrigatório!'),
     data: z.string().nonempty('A data é obrigatória!'),
+    hora: z.string().nonempty('O horário é obrigatório!'),
     profissional: z.string().nonempty('O nome do profissional é obrigatório!'),
 });
 

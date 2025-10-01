@@ -11,7 +11,6 @@ export function TeleconsultaList({ teleconsultas, removeTeleconsulta }: Telecons
     <>
       {teleconsultas.map((value) => (
         <TeleconsultaResume 
-          key={value.id} // importante para o React
           removeTeleconsulta={removeTeleconsulta} 
           teleconsulta={value} 
         />

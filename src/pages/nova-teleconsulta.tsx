@@ -9,7 +9,7 @@ interface AddTeleconsultaProps {
 export function NovaTeleconsulta({ onAdd }: AddTeleconsultaProps) {
     return (
         <div>
-            <h1 className="titulo">Nova Teleconsulta</h1>
+            <h1 className="titulo">Agendar Nova Teleconsulta</h1>
 
             <TeleconsultaForm onAdd={onAdd}/>
         </div>

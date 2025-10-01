@@ -2,13 +2,15 @@ import type { Teleconsulta } from "../types/teleconsulta";
 import { useForm } from "react-hook-form";
 import { teleconsultaSchema, type TeleconsultaFormData } from "../schemas/teleconsulta-schema";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { useNavigate } from "react-router-dom";
 
 interface TeleconsultaFormProps {
   onAdd: (teleconsulta: Teleconsulta) => void;
 }
 
-
 export function TeleconsultaForm({ onAdd }: TeleconsultaFormProps) {
+  const navigate = useNavigate();
+
   const {
     register,
     handleSubmit,
@@ -19,71 +21,66 @@ export function TeleconsultaForm({ onAdd }: TeleconsultaFormProps) {
   });
 
   function onSubmit(data: TeleconsultaFormData): void {
-    console.log(data);
-
     const teleconsulta: Teleconsulta = {
       id: crypto.randomUUID(),
       titulo: data.titulo,
       data: data.data,
-      end: data.end,
+      hora: data.hora,
       profissional: data.profissional,
     };
 
-    onAdd(teleconsulta);
-    reset();
+    onAdd(teleconsulta);   // adiciona no estado do App
+    reset();               // limpa o formulário
+    navigate("/teleconsultas"); // redireciona para a lista
   }
 
   return (
     <form
       onSubmit={handleSubmit(onSubmit)}
-      className="bg-white shadow rounded-lg p-4 flex flex-col gap-3 mb-5 w-4/5"
+      className="bg-white shadow rounded-xl p-4 flex flex-col gap-3 mb-5 w-4/5"
     >
-      <label htmlFor="teleconsulta-titulo">Título da teleconsulta</label>
+      <label htmlFor="teleconsulta-titulo">Tipo da teleconsulta</label>
       <input
         type="text"
         id="teleconsulta-titulo"
-        placeholder="título da teleconsulta"
+        placeholder="Tipo da teleconsulta"
         className="border rounded p-2"
-        {...register('titulo')}
+        {...register("titulo")}
       />
-
       {errors.titulo && <p className="text-red-500">{errors.titulo.message}</p>}
 
       <label htmlFor="teleconsulta-data">Data</label>
       <input
         type="date"
         id="teleconsulta-data"
-        placeholder="Data"
         className="border rounded p-2"
-        {...register('data')}
+        {...register("data")}
       />
-
       {errors.data && <p className="text-red-500">{errors.data.message}</p>}
-      
 
-      <label htmlFor="teleconsulta-end">Endereço</label>
+      <label htmlFor="teleconsulta-hora">Horário</label>
       <input
-        type="number"
-        id="teleconsulta-end"
-        placeholder="Endereço"
+        type="time"
+        id="teleconsulta-hora"
+        placeholder="Horário"
         className="border rounded p-2"
-        {...register('end')}
+        {...register("hora")}
       />
-
-      {errors.end && <p className="text-red-500">{errors.end.message}</p>}
+      {errors.hora && <p className="text-red-500">{errors.hora.message}</p>}
 
       <label htmlFor="teleconsulta-profissional">Profissional</label>
       <input
         type="text"
-        id="teleconsulta-profissional" 
+        id="teleconsulta-profissional"
         placeholder="Nome do profissional"
         className="border rounded p-2"
-        {...register('profissional')}
-        />
+        {...register("profissional")}
+      />
+      {errors.profissional && <p className="text-red-500">{errors.profissional.message}</p>}
 
       <button
         type="submit"
-        className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
+        className="bg-[#0077c8] text-white px-4 py-2 rounded-xl hover:bg-blue-700"
       >
         Adicionar teleconsulta
       </button>
