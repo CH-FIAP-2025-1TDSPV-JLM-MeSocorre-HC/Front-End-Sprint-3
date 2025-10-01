@@ -5,7 +5,7 @@ import "../App.css";
 export function Layout() {
   return (
     <div className="flex min-h-screen">
-      <aside className="w-72 bg-gray-100 p-4 flex flex-col h-screen overflow-hidden hover:overflow-y-auto transition-all;">
+      <aside className="w-72 bg-gray-100 p-4 flex flex-col fixed left-0 top-0 bottom-0 overflow-hidden hover:overflow-y-auto transition-all;">
         <div className="flex items-center justify-center mb-8">
           <img src="hc-usp.png" alt="HC-USP" className="h-20" />
         </div>
@@ -56,8 +56,8 @@ export function Layout() {
       </aside>
 
 
-      <main className="flex-1 bg-gray-100 px-4 pt-8 min-h-10;">
-        <section className="bg-white min-h-95/100 p-6 rounded-2xl">
+      <main className="flex-1 bg-gray-100 px-4 pt-8 ml-72">
+        <section className="bg-white min-h-[95vh] p-6 rounded-2xl">
           <Outlet />
         </section>
       </main>
